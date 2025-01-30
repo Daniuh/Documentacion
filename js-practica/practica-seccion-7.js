@@ -1,4 +1,7 @@
-const fher = {
+//Clases
+
+//Sección 7, video 72
+/* const fher = {
     nombre: 'Fernando',
     edad: 30,
     imprimir(){
@@ -28,7 +31,26 @@ const melissa = new Persona('Melissa', 35);
 console.log(maria);
 
 maria.imprimir();
-melissa.imprimir();
+melissa.imprimir(); */
 
+//Sección 7, video 73
+class Persona {
+
+    nombre = "";
+    codigo = "";
+    frase  = "";
+
+    constructor(nombre = 'Sin nombre', codigo = 'Sin código', frase = 'Sin frase') {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.frase  = frase;
+    }
+
+}
+
+const spiderman = new Persona('Peter Parker', 'Spider', 'Soy tu amigable vecino spider man');
+const ironman   = new Persona('Tony Stark', 'Ironman', 'Yo soy Ironman');
+console.log( spiderman );
+console.log( ironman );
 
 

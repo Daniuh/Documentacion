@@ -99,7 +99,6 @@ Persona.propiedadExterna = 'Soy una propiedad externa'; //No es bueno crear prop
 
 console.log(Persona.propiedadExterna); */
 
-
 //Sección 7, video 77
 /* class Persona {
 
@@ -168,10 +167,9 @@ console.log(spiderman);
 spiderman.quienSoy();
  */
 
-
 //Sección 7, video 78
 //esnext.js
-class Rectangulo {
+/* class Rectangulo {
     
     #area = 0;
 
@@ -192,4 +190,34 @@ const rectangulo = new Rectangulo(10, 15);
 rectangulo.calcularArea();
 
 console.log(rectangulo);
+ */
+
+
+
+//Singleton
+
+//Sección 7, video 79
+class Singleton {
+    
+    static instancia; //Undefined
+    nombre = '';
+
+    constructor(nombre = '') {
+
+        if (!!Singleton.instancia){
+            return Singleton.instancia;
+        }
+        Singleton.instancia = this;
+        this.nombre = nombre;
+    }
+
+}
+
+const instancia = new Singleton('Ironman');
+const instancia2 = new Singleton('Spiderman');
+const instancia3 = new Singleton('Blacpanther');
+
+console.log(`Nombre en la instancia es: ${instancia.nombre}`);
+console.log(`Nombre en la instancia es: ${instancia2.nombre}`);
+console.log(`Nombre en la instancia es: ${instancia3.nombre}`);
 

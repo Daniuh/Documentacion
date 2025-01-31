@@ -101,7 +101,7 @@ console.log(Persona.propiedadExterna); */
 
 
 //Sección 7, video 77
-class Persona {
+/* class Persona {
 
     static _conteo = 0;
     static get conteo() {
@@ -166,4 +166,30 @@ const spiderman = new Heroe('Peter Parker', 'Spiderman', 'Soy tu amigable vecino
 
 console.log(spiderman);
 spiderman.quienSoy();
+ */
+
+
+//Sección 7, video 78
+//esnext.js
+class Rectangulo {
+    
+    #area = 0;
+
+    constructor(base = 0, altura = 0) {
+        this.base   = base;
+        this.altura = altura;
+
+        this.#area = base * altura;
+    }
+
+    calcularArea() {
+        console.log(this.#area * 2);
+    }
+}
+
+const rectangulo = new Rectangulo(10, 15);
+
+rectangulo.calcularArea();
+
+console.log(rectangulo);
 

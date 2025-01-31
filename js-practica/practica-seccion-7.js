@@ -36,6 +36,16 @@ melissa.imprimir(); */
 //Sección 7, video 73
 class Persona {
 
+    static _conteo = 0;
+    static get conteo() {
+        return Persona._conteo + ' instancias';
+    }
+
+    static mensaje() {
+        console.log(this.nombre); //Va a dar undefined
+        console.log('Hola a todos soy un métoo estático');
+    }
+
     nombre = "";
     codigo = "";
     frase  = "";
@@ -45,6 +55,8 @@ class Persona {
         this.codigo = codigo;
         this.nombre = nombre;
         this.frase  = frase;
+
+        Persona._conteo++; //Forma correcta de hacer el conteo de las instancias...
     }
 
     set setComidaFavorita(comida) {
@@ -69,11 +81,21 @@ class Persona {
 
 const spiderman = new Persona('Peter Parker', 'Spiderman', 'Soy tu amigable vecino Spiderman');
 const ironman   = new Persona('Tony Stark', 'Ironman', 'Yo soy Ironman');
-console.log( ironman );
+
+//console.log( ironman );
 
 spiderman.miFrase();
 //ironman.miFrase();
 
 spiderman.setComidaFavorita = 'El pie de cereza de la tía May';
-console.log( spiderman );
+//console.log( spiderman );
+
+//Persona._conteo = 2; //Forma poco útil de hacer el conteo de instancias
+console.log('Conteo estático', Persona._conteo);
+console.log('Instancias: ', Persona.conteo);
+Persona.mensaje();
+
+Persona.propiedadExterna = 'Soy una propiedad externa'; //No es bueno crear propiedades fuera de la clase
+
+console.log(Persona.propiedadExterna);
 

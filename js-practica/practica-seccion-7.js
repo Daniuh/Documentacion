@@ -197,7 +197,7 @@ console.log(rectangulo);
 //Singleton
 
 //Sección 7, video 79
-class Singleton {
+/* class Singleton {
     
     static instancia; //Undefined
     nombre = '';
@@ -219,5 +219,45 @@ const instancia3 = new Singleton('Blacpanther');
 
 console.log(`Nombre en la instancia es: ${instancia.nombre}`);
 console.log(`Nombre en la instancia es: ${instancia2.nombre}`);
-console.log(`Nombre en la instancia es: ${instancia3.nombre}`);
+console.log(`Nombre en la instancia es: ${instancia3.nombre}`); */
+
+
+
+//Pro tips
+
+//Sección 7, video 80
+class Persona {
+
+    static porObjecto( {nombre, apellido, pais} ) {
+        return new Persona(nombre, apellido, pais);
+    }
+
+    constructor(nombre, apellido, pais){
+
+        this.nombre   = nombre;
+        this.apellido = apellido;
+        this.pais     = pais;
+    }
+
+    getInfo(){
+        console.log(`Info: ${this.nombre}, ${this.apellido}, ${this.pais}`);
+    }
+}
+
+const nombre1   = 'Melissa',
+      apellido1 = 'Flores',
+      pais1      = 'Colombia';
+
+const fher = {
+    nombre:   'Daniel',
+    apellido: 'Naranjo',
+    pais:     'Colombia'
+}
+
+const persona1 = new Persona(nombre1, apellido1, pais1);
+const persona2 = Persona.porObjecto(fher);
+
+persona1.getInfo();
+persona2.getInfo();
+
 

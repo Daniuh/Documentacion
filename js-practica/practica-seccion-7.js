@@ -34,7 +34,7 @@ maria.imprimir();
 melissa.imprimir(); */
 
 //Sección 7, video 73
-class Persona {
+/* class Persona {
 
     static _conteo = 0;
     static get conteo() {
@@ -97,5 +97,73 @@ Persona.mensaje();
 
 Persona.propiedadExterna = 'Soy una propiedad externa'; //No es bueno crear propiedades fuera de la clase
 
-console.log(Persona.propiedadExterna);
+console.log(Persona.propiedadExterna); */
+
+
+//Sección 7, video 77
+class Persona {
+
+    static _conteo = 0;
+    static get conteo() {
+        return Persona._conteo + ' instancias';
+    }
+
+    static mensaje() {
+        console.log(this.nombre); //Va a dar undefined
+        console.log('Hola a todos soy un métoo estático');
+    }
+
+    nombre = "";
+    codigo = "";
+    frase  = "";
+    comida = "";
+
+    constructor(nombre = 'Sin nombre', codigo = 'Sin código', frase = 'Sin frase') {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.frase  = frase;
+
+        Persona._conteo++; //Forma correcta de hacer el conteo de las instancias...
+    }
+
+    set setComidaFavorita(comida) {
+        this.comida = comida.toUpperCase();
+    }
+
+    get getComidaFavorita() {
+        return `La comida favorita de ${this.nombre} es ${this.comida}`;
+    }
+
+    quienSoy(){
+        console.log(`Soy ${this.nombre} y mi identidad es ${this.codigo}`);
+        
+    }
+
+    miFrase() {
+        this.quienSoy();
+        console.log(`Y mi frase es ${this.frase}`);
+    }
+
+}
+
+class Heroe extends Persona {
+    clan = 'Sin clan';
+
+    constructor(nombre, codigo, frase) {
+        
+        super(nombre, codigo, frase);
+        
+        this.clan = 'The Avengers';
+    }
+
+    quienSoy() {
+        console.log(`Soy ${this.nombre}, ${this.clan}`);
+        super.quienSoy();
+    }
+}
+
+const spiderman = new Heroe('Peter Parker', 'Spiderman', 'Soy tu amigable vecino Spiderman');
+
+console.log(spiderman);
+spiderman.quienSoy();
 

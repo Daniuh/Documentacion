@@ -2,7 +2,6 @@
 
 //Sección 3, video 23
 /*
-
 let videoJuegos = [ 'Valorant', 'League of Legends', 'Mario 3', ];
 console.log({ videoJuegos });
 
@@ -28,15 +27,15 @@ console.log(arregloCosas[4][3][1]);
 //Sección 3, video 24 
 /*
 let juegos = [ 'Lego', 'Uno', 'Rummy', 'Parques' ];
-console.log( 'Largo: ', juegos.length );
+console.log('Largo: ', juegos.length);
 
 let primero = juegos[0];
 let ultimo  = juegos[ juegos.length - 1 ];
 console.log('Primero: ', primero ,'último: ', ultimo);
 
-juegos.forEach( (elemento, indice, arr) => {
+juegos.forEach((elemento, indice, arr) => {
     console.log({ elemento, indice, arr });
-} );
+});
 
 let nuevaLongitud = juegos.push('Ajedrez');
 console.log({ nuevaLongitud, juegos });
@@ -122,7 +121,6 @@ function saludar(nombre) {
     console.log('Hola ' + nombre);
     return [ 1, 2, 3, 4, 5, 6 ];
 
-
     //Esto nunca se va a ejecutar
     console.log('Soy un código que está después del return');
 }
@@ -185,7 +183,6 @@ function crearPersona(nombre, apellido) {
 }
 
 const crearPersona = (nombre, apellido) => ({ nombre, apellido });
-
 
 const persona = crearPersona('Daniel', 'Naranjo');
 console.log(persona);

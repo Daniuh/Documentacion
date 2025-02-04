@@ -53,7 +53,6 @@ if(a > 10) {
 
 console.log('Fin del programa');
 
-
 const hoy = new Date();
 
 let dia = hoy.getDay();
@@ -134,7 +133,6 @@ const a3 = soyFalso || 'Ya no soy falso';
 const a4 = soyFalso || soyUndefined || soyNull || 'Ya no soy un falso de nuevo';
 const a5 = soyFalso || soyUndefined || regresaTrue() || 'Ya no soy un falso de nuevo';
 
-
 console.log({ a1, a2, a3, a4, a5 });
 */
 
@@ -143,7 +141,6 @@ console.log({ a1, a2, a3, a4, a5 });
 
 //Sección 4, video 38
 /*
-
 //   Días de semana abrimos a las 11,
 //   pero los fines de semana abrimos a las 9
  
@@ -248,8 +245,7 @@ console.warn('While');
     }
     console.log(carros[i]);
     i++;
- }
-
+}
 
 console.warn('Do While');
 

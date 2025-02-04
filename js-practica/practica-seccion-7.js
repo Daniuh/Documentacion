@@ -21,8 +21,7 @@ function Persona(nombre, edad) {
 
     this.imprimir = function() {
         console.log(`Nombre: ${ this.nombre} - edad: ${this.edad}`);
-    }
-    
+    }  
 }
 
 const maria   = new Persona('Maria', 30);
@@ -76,7 +75,6 @@ melissa.imprimir(); */
         this.quienSoy();
         console.log(`Y mi frase es ${this.frase}`);
     }
-
 }
 
 const spiderman = new Persona('Peter Parker', 'Spiderman', 'Soy tu amigable vecino Spiderman');
@@ -142,7 +140,6 @@ console.log(Persona.propiedadExterna); */
         this.quienSoy();
         console.log(`Y mi frase es ${this.frase}`);
     }
-
 }
 
 class Heroe extends Persona {
@@ -192,8 +189,6 @@ rectangulo.calcularArea();
 console.log(rectangulo);
  */
 
-
-
 //Singleton
 
 //Sección 7, video 79
@@ -221,8 +216,6 @@ console.log(`Nombre en la instancia es: ${instancia.nombre}`);
 console.log(`Nombre en la instancia es: ${instancia2.nombre}`);
 console.log(`Nombre en la instancia es: ${instancia3.nombre}`); */
 
-
-
 //Pro tips
 
 //Sección 7, video 80
@@ -246,7 +239,7 @@ class Persona {
 
 const nombre1   = 'Melissa',
       apellido1 = 'Flores',
-      pais1      = 'Colombia';
+      pais1     = 'Colombia';
 
 const fher = {
     nombre:   'Daniel',
@@ -259,5 +252,3 @@ const persona2 = Persona.porObjecto(fher);
 
 persona1.getInfo();
 persona2.getInfo();
-
-
